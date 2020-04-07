@@ -7,6 +7,7 @@ import {
   Modal,
   StyleSheet,
   ScrollView,
+  View,
 } from 'react-native';
 
 import {Button, Block, Text} from '../components';
@@ -223,21 +224,28 @@ class Welcome extends Component {
           {this.renderSteps()}
         </Block>
         <Block middle flex={0.5} margin={[0, theme.sizes.padding * 2]}>
-          <Button onPress={() => navigation.navigate('Login')}>
-            <Text center semibold primary bold>
+          <Button
+            style={{backgroundColor: '#9ACD32'}}
+            onPress={() => navigation.navigate('Login')}>
+            <Text style={{color: 'black'}} center semibold primary bold>
               Login
             </Text>
           </Button>
-          <Button shadow onPress={() => navigation.navigate('SignUp')}>
-            <Text center semibold secondary>
+          <Button
+            style={{backgroundColor: '#008000'}}
+            onPress={() => navigation.navigate('SignUp')}>
+            <Text style={{color: 'black'}} center semibold secondary>
               Signup
             </Text>
           </Button>
-          <Button onPress={() => this.setState({showTerms: true})}>
-            <Text center caption secondary>
+          <Button
+            style={{backgroundColor: '#20B2AA'}}
+            onPress={() => this.setState({showTerms: true})}>
+            <Text style={{color: 'black'}} center caption secondary>
               Terms of service
             </Text>
           </Button>
+          <View style={{padding: 2}} />
         </Block>
         {this.renderTermsService()}
       </Block>

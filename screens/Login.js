@@ -47,7 +47,7 @@ export default class Login extends Component {
   render() {
     const {navigation} = this.props;
     const {loading, errors} = this.state;
-    const hasErrors = key => (errors.includes(key) ? styles.hasErrors : null);
+    const hasErrors = (key) => (errors.includes(key) ? styles.hasErrors : null);
 
     return (
       <ScrollView style={{marginVertical: theme.sizes.padding}}>
@@ -62,7 +62,7 @@ export default class Login extends Component {
                 error={hasErrors('email')}
                 style={[styles.input, hasErrors('email')]}
                 defaultValue={this.state.email}
-                onChangeText={text => this.setState({email: text})}
+                onChangeText={(text) => this.setState({email: text})}
               />
               <Input
                 secure
@@ -70,20 +70,26 @@ export default class Login extends Component {
                 error={hasErrors('password')}
                 style={[styles.input, hasErrors('password')]}
                 defaultValue={this.state.password}
-                onChangeText={text => this.setState({password: text})}
+                onChangeText={(text) => this.setState({password: text})}
               />
-              <Button shadow onPress={() => this.handleLogin()}>
+              <Button
+                style={{backgroundColor: '#9ACD32'}}
+                shadow
+                onPress={() => this.handleLogin()}>
                 {loading ? (
                   <ActivityIndicator size="small" color="white" />
                 ) : (
-                  <Text bold h3 center primary>
+                  <Text style={{color: 'black'}} bold h3 center primary>
                     Login
                   </Text>
                 )}
               </Button>
 
-              <Button shadow onPress={() => navigation.navigate('Forgot')}>
-                <Text black h4 center>
+              <Button
+                style={{backgroundColor: '#A9A9A9'}}
+                shadow
+                onPress={() => navigation.navigate('Forgot')}>
+                <Text style={{color: 'black'}} h4 center>
                   Forgot your password?
                 </Text>
               </Button>

@@ -55,7 +55,7 @@ export default class SignUp extends Component {
   render() {
     const {navigation} = this.props;
     const {loading, errors} = this.state;
-    const hasErrors = key => (errors.includes(key) ? styles.hasErrors : null);
+    const hasErrors = (key) => (errors.includes(key) ? styles.hasErrors : null);
 
     return (
       <ScrollView style={{marginVertical: theme.sizes.padding}}>
@@ -71,14 +71,14 @@ export default class SignUp extends Component {
                 error={hasErrors('email')}
                 style={[styles.input, hasErrors('email')]}
                 defaultValue={this.state.email}
-                onChangeText={text => this.setState({email: text})}
+                onChangeText={(text) => this.setState({email: text})}
               />
               <Input
                 label="Username"
                 error={hasErrors('username')}
                 style={[styles.input, hasErrors('username')]}
                 defaultValue={this.state.username}
-                onChangeText={text => this.setState({username: text})}
+                onChangeText={(text) => this.setState({username: text})}
               />
               <Input
                 secure
@@ -86,9 +86,12 @@ export default class SignUp extends Component {
                 error={hasErrors('password')}
                 style={[styles.input, hasErrors('password')]}
                 defaultValue={this.state.password}
-                onChangeText={text => this.setState({password: text})}
+                onChangeText={(text) => this.setState({password: text})}
               />
-              <Button shadow onPress={() => this.handleSignUp()}>
+              <Button
+                style={{backgroundColor: '#008000'}}
+                shadow
+                onPress={() => this.handleSignUp()}>
                 {loading ? (
                   <ActivityIndicator size="small" color="white" />
                 ) : (
@@ -98,12 +101,11 @@ export default class SignUp extends Component {
                 )}
               </Button>
 
-              <Button shadow onPress={() => navigation.navigate('Login')}>
-                <Text
-                  gray
-                  caption
-                  center
-                  style={{textDecorationLine: 'underline'}}>
+              <Button
+                style={{backgroundColor: '#9ACD32'}}
+                shadow
+                onPress={() => navigation.navigate('Login')}>
+                <Text caption center style={{textDecorationLine: 'underline'}}>
                   Back to Login
                 </Text>
               </Button>

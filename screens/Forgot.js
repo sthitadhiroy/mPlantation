@@ -5,12 +5,13 @@ import {
   Keyboard,
   KeyboardAvoidingView,
   StyleSheet,
+  View,
 } from 'react-native';
 
 import {Button, Block, Input, Text} from '../components';
 import {theme} from '../constants';
 
-const VALID_EMAIL = 'contact@react.com';
+const VALID_EMAIL = 'user@mPlantation.com';
 
 export default class Forgot extends Component {
   state = {
@@ -61,23 +62,28 @@ export default class Forgot extends Component {
   render() {
     const {navigation} = this.props;
     const {loading, errors} = this.state;
-    const hasErrors = key => (errors.includes(key) ? styles.hasErrors : null);
+    const hasErrors = (key) => (errors.includes(key) ? styles.hasErrors : null);
 
     return (
       <KeyboardAvoidingView style={styles.forgot} behavior="padding">
         <Block padding={[0, theme.sizes.base * 2]}>
+          <View style={{padding: 5}} />
           <Text h1 bold>
             Forgot
           </Text>
-          <Block middle>
+          <View style={{padding: 60}} />
+          <Block>
             <Input
               label="Email"
               error={hasErrors('email')}
               style={[styles.input, hasErrors('email')]}
               defaultValue={this.state.email}
-              onChangeText={text => this.setState({email: text})}
+              onChangeText={(text) => this.setState({email: text})}
             />
-            <Button shadow onPress={() => this.handleForgot()}>
+            <Button
+              style={{backgroundColor: '#A9A9A9'}}
+              shadow
+              onPress={() => this.handleForgot()}>
               {loading ? (
                 <ActivityIndicator size="small" color="white" />
               ) : (
@@ -87,12 +93,10 @@ export default class Forgot extends Component {
               )}
             </Button>
 
-            <Button onPress={() => navigation.navigate('Login')}>
-              <Text
-                gray
-                caption
-                center
-                style={{textDecorationLine: 'underline'}}>
+            <Button
+              style={{backgroundColor: '#9ACD32'}}
+              onPress={() => navigation.navigate('Login')}>
+              <Text caption center style={{textDecorationLine: 'underline'}}>
                 Back to Login
               </Text>
             </Button>
