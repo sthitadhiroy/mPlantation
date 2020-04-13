@@ -13,18 +13,55 @@ import {theme, mocks} from '../constants';
 const {width} = Dimensions.get('window');
 
 class Browse extends Component {
-  state = {
-    active: 'Products',
-    categories: [],
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      active: 'Products',
+      categories: [],
+    };
+    this.redirectPage = this.redirectPage.bind(this);
+  }
+
+  redirectPage(category) {
+    if (category.name === 'Plants') {
+      this.props.navigation.navigate('Plants', {category});
+    }
+    if (category.name === 'Seeds') {
+      this.props.navigation.navigate('Seeds', {category});
+    }
+    if (category.name === 'Flowers') {
+      this.props.navigation.navigate('Flowers', {category});
+    }
+    if (category.name === 'Sprayers') {
+      this.props.navigation.navigate('Sprayers', {category});
+    }
+    if (category.name === 'Pots') {
+      this.props.navigation.navigate('Pots', {category});
+    }
+    if (category.name === 'fertilizers') {
+      this.props.navigation.navigate('Fertilizers', {category});
+    }
+    if (category.name === 'Plants Trivia') {
+      this.props.navigation.navigate('PlantTrivia', {category});
+    }
+    if (category.name === 'Seeds Trivia') {
+      this.props.navigation.navigate('SeedTrivia', {category});
+    }
+    if (category.name === 'Flowers Trivia') {
+      this.props.navigation.navigate('FlowerTrivia', {category});
+    }
+    if (category.name === 'Fertilizers Trivia') {
+      this.props.navigation.navigate('FertilizerTrivia', {category});
+    }
+  }
 
   componentDidMount() {
     this.setState({categories: this.props.categories});
   }
 
-  handleTab = (tab) => {
+  handleTab = tab => {
     const {categories} = this.props;
-    const filtered = categories.filter((category) =>
+    const filtered = categories.filter(category =>
       category.tags.includes(tab.toLowerCase()),
     );
 
@@ -50,7 +87,7 @@ class Browse extends Component {
   render() {
     const {profile, navigation} = this.props;
     const {categories} = this.state;
-    const tabs = ['Products', 'Trivia', 'Shop'];
+    const tabs = ['Products', 'Trivia', 'Decor'];
 
     return (
       <Block>
@@ -64,17 +101,17 @@ class Browse extends Component {
         </Block>
 
         <Block flex={false} row style={styles.tabs}>
-          {tabs.map((tab) => this.renderTab(tab))}
+          {tabs.map(tab => this.renderTab(tab))}
         </Block>
 
         <ScrollView
           showsVerticalScrollIndicator={false}
           style={{paddingVertical: theme.sizes.base * 2}}>
           <Block flex={false} row space="between" style={styles.categories}>
-            {categories.map((category) => (
+            {categories.map(category => (
               <TouchableOpacity
                 key={category.name}
-                onPress={() => navigation.navigate('Explore', {category})}>
+                onPress={() => this.redirectPage(category)}>
                 <Card center middle shadow style={styles.category}>
                   <Badge
                     margin={[0, 0, 15]}

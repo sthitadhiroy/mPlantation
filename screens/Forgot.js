@@ -62,7 +62,7 @@ export default class Forgot extends Component {
   render() {
     const {navigation} = this.props;
     const {loading, errors} = this.state;
-    const hasErrors = (key) => (errors.includes(key) ? styles.hasErrors : null);
+    const hasErrors = key => (errors.includes(key) ? styles.hasErrors : null);
 
     return (
       <KeyboardAvoidingView style={styles.forgot} behavior="padding">
@@ -71,15 +71,16 @@ export default class Forgot extends Component {
           <Text h1 bold>
             Forgot
           </Text>
-          <View style={{padding: 60}} />
+          <View style={{padding: 40}} />
           <Block>
             <Input
               label="Email"
               error={hasErrors('email')}
               style={[styles.input, hasErrors('email')]}
               defaultValue={this.state.email}
-              onChangeText={(text) => this.setState({email: text})}
+              onChangeText={text => this.setState({email: text})}
             />
+            <View style={{padding: 40}} />
             <Button
               style={{backgroundColor: '#A9A9A9'}}
               shadow

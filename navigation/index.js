@@ -8,12 +8,21 @@ import Welcome from '../screens/Welcome';
 import Login from '../screens/Login';
 import SignUp from '../screens/SignUp';
 import Forgot from '../screens/Forgot';
-import Explore from '../screens/Explore';
+import Plants from '../screens/Plants';
 import Browse from '../screens/Browse';
 import Settings from '../screens/Settings';
 import Payment from '../screens/Payment';
 import Verification from '../screens/Verification';
 import Rate from '../screens/Rate';
+import Seeds from '../screens/Seeds';
+import Flowers from '../screens/Flowers';
+import Sprayers from '../screens/Sprayers';
+import Pots from '../screens/Pots';
+import Fertilizers from '../screens/Fertilizers';
+import PlantTrivia from '../screens/PlantTrivia';
+import SeedTrivia from '../screens/SeedTrivia';
+import FlowerTrivia from '../screens/FlowerTrivia';
+import FertilizerTrivia from '../screens/FertilizerTrivia';
 
 import {theme} from '../constants';
 
@@ -24,7 +33,16 @@ const screens = createStackNavigator(
     Login,
     SignUp,
     Forgot,
-    Explore,
+    Plants,
+    PlantTrivia,
+    SeedTrivia,
+    Seeds,
+    Flowers,
+    FlowerTrivia,
+    Sprayers,
+    Pots,
+    Fertilizers,
+    FertilizerTrivia,
     Browse,
     Settings,
     Payment,

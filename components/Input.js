@@ -40,8 +40,8 @@ export default class Input extends Component {
           rightLabel
         ) : (
           <Icon.Button
-            color={theme.colors.gray}
-            size={theme.sizes.font * 1.35}
+            color="black"
+            size={theme.sizes.font * 1}
             name={!toggleSecure ? 'md-eye' : 'md-eye-off'}
           />
         )}
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     borderRadius: theme.sizes.radius,
     fontSize: theme.sizes.font,
     fontWeight: '500',
-    color: theme.colors.black,
+    color: 'black',
     height: theme.sizes.base * 3,
   },
   toggle: {

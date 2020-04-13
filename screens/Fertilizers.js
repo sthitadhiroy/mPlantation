@@ -18,7 +18,7 @@ import NumericInput from 'react-native-numeric-input';
 
 const {width, height} = Dimensions.get('window');
 
-class Explore extends Component {
+class Fertilizers extends Component {
   FunctionToPay = () => {
     this.props.navigation.navigate('Payment');
   };
@@ -28,14 +28,14 @@ class Explore extends Component {
         <View>
           <Card
             style={{backgroundColor: 'red', height: '45%'}}
-            image={require('../assets/images/Bplant03.png')}>
+            image={require('../assets/images/Bfertilizers01.png')}>
             <Text style={{marginBottom: 10}}>
-              Costa Farms Clean Air-O2 For You Live House Plant Collection
-              4-Pack, Assorted Foliage, 4-Inch, Green
+              Miracle-Gro Shake 'N Feed All Purpose Plant Food, 4.5 lbs, Covers
+              up to 180 sq. ft.
             </Text>
             <View style={{alignItems: 'center'}}>
               <NumericInput
-                onChange={(value) => console.log(value)}
+                onChange={value => console.log(value)}
                 onLimitReached={(isMax, msg) => console.log(isMax, msg)}
                 totalWidth={150}
                 totalHeight={40}
@@ -66,15 +66,14 @@ class Explore extends Component {
           <Divider style={{backgroundColor: 'black'}} />
           <Card
             style={{backgroundColor: 'red', height: '45%'}}
-            image={require('../assets/images/Bplant02.png')}>
+            image={require('../assets/images/Bfertilizers02.png')}>
             <Text style={{marginBottom: 10}}>
-              Succulent Plants (5 Pack), Fully Rooted in Planter Pots with Soil
-              - Real Live Potted Succulents / Unique Indoor Cactus Decor by
-              Plants for Pets
+              Osmocote 274850 Smart-Release Plant Food Plus Outdoor & Indoor, 8
+              lbs
             </Text>
             <View style={{alignItems: 'center'}}>
               <NumericInput
-                onChange={(value) => console.log(value)}
+                onChange={value => console.log(value)}
                 onLimitReached={(isMax, msg) => console.log(isMax, msg)}
                 totalWidth={150}
                 totalHeight={40}
@@ -105,15 +104,13 @@ class Explore extends Component {
           <Divider style={{backgroundColor: 'black'}} />
           <Card
             style={{backgroundColor: 'red', height: '45%'}}
-            image={require('../assets/images/Bplant04.png')}>
+            image={require('../assets/images/Bfertilizers03.png')}>
             <Text style={{marginBottom: 10}}>
-              BEGONDIS Set of 3 Artificial Succulents with Led Lights in Wooden
-              Box, Artificial Plants Plastic Fake Topiary for Home/Office
-              Decorations, Table Centerpiece
+              Espoma HT36 Holly-Tone Plant Food Bag, 36-Pound, 36 lb, Multicolor
             </Text>
             <View style={{alignItems: 'center'}}>
               <NumericInput
-                onChange={(value) => console.log(value)}
+                onChange={value => console.log(value)}
                 onLimitReached={(isMax, msg) => console.log(isMax, msg)}
                 totalWidth={150}
                 totalHeight={40}
@@ -144,15 +141,13 @@ class Explore extends Component {
           <Divider style={{backgroundColor: 'black'}} />
           <Card
             style={{backgroundColor: 'red', height: '45%'}}
-            image={require('../assets/images/Bplant05.png')}>
+            image={require('../assets/images/Bfertilizers04.png')}>
             <Text style={{marginBottom: 10}}>
-              The Bloom Times 2 Pcs Fake Plants for Bathroom/Home Office Decor,
-              Small Artificial Faux Greenery for House Decorations (Potted
-              Plants)
+              Miracle-Gro Liquafeed All Purpose Plant Food, 4-Pack Refills
             </Text>
             <View style={{alignItems: 'center'}}>
               <NumericInput
-                onChange={(value) => console.log(value)}
+                onChange={value => console.log(value)}
                 onLimitReached={(isMax, msg) => console.log(isMax, msg)}
                 totalWidth={150}
                 totalHeight={40}
@@ -183,16 +178,15 @@ class Explore extends Component {
           <Divider style={{backgroundColor: 'black'}} />
           <Card
             style={{backgroundColor: 'red', height: '45%'}}
-            image={require('../assets/images/Bplant06.png')}>
+            image={require('../assets/images/Bfertilizers05.png')}>
             <Text style={{marginBottom: 10}}>
-              Artificial Boxwood & Grass Plants - Gorgeous Fake Plants in Pots
-              for Home Decor - Indoor Faux Plants Bring Your Living and
-              Workspace to Life Without Any of The Maintenance -3 Plants Per
-              Unit
+              Miracle-Gro Indoor Plant Food Spikes, Includes 48 Spikes -
+              Continuous Feeding for all Flowering and Foliage Houseplants - NPK
+              6-12-6, 1 Pack of 48 Spikes
             </Text>
             <View style={{alignItems: 'center'}}>
               <NumericInput
-                onChange={(value) => console.log(value)}
+                onChange={value => console.log(value)}
                 onLimitReached={(isMax, msg) => console.log(isMax, msg)}
                 totalWidth={150}
                 totalHeight={40}
@@ -223,15 +217,15 @@ class Explore extends Component {
           <Divider style={{backgroundColor: 'black'}} />
           <Card
             style={{backgroundColor: 'red', height: '45%'}}
-            image={require('../assets/images/Bplant07.png')}>
+            image={require('../assets/images/Bfertilizers06.png')}>
             <Text style={{marginBottom: 10}}>
-              AOMGD 3 Pack Macrame Plant Hanger and 3 PCS Hooks Indoor Outdoor
-              Hanging Plant Holder Hanging Planter Stand Flower Pots for
-              Decorations - Cotton Rope, 4 Legs, 3 Sizes
+              EarthPods Premium Indoor Plant Food – Easy Organic Fertilizer
+              Spikes – 100 Capsules – All Purpose (Great for Indoor Houseplants
+              + Outdoor Potted Flower Gardens, No Urea, Ecofriendly)
             </Text>
             <View style={{alignItems: 'center'}}>
               <NumericInput
-                onChange={(value) => console.log(value)}
+                onChange={value => console.log(value)}
                 onLimitReached={(isMax, msg) => console.log(isMax, msg)}
                 totalWidth={150}
                 totalHeight={40}
@@ -262,15 +256,13 @@ class Explore extends Component {
           <Divider style={{backgroundColor: 'black'}} />
           <Card
             style={{backgroundColor: 'red', height: '45%'}}
-            image={require('../assets/images/Bplant08.png')}>
+            image={require('../assets/images/Bfertilizers07.png')}>
             <Text style={{marginBottom: 10}}>
-              Supla Artificial Pre-Made Succulent Wood Planter Arrangement 10
-              Pcs Assorted Fake Succulent Plants in Rectangular Wooden Planter
-              Box Faux Potted Succulents Centerpiece Succulent Garden
+              SUPERthrive VI30148 Plant Vitamin Solution, 4 Ounce - 00014
             </Text>
             <View style={{alignItems: 'center'}}>
               <NumericInput
-                onChange={(value) => console.log(value)}
+                onChange={value => console.log(value)}
                 onLimitReached={(isMax, msg) => console.log(isMax, msg)}
                 totalWidth={150}
                 totalHeight={40}
@@ -301,16 +293,13 @@ class Explore extends Component {
           <Divider style={{backgroundColor: 'black'}} />
           <Card
             style={{backgroundColor: 'red', height: '45%'}}
-            image={require('../assets/images/Bplant09.png')}>
+            image={require('../assets/images/Bfertilizers08.png')}>
             <Text style={{marginBottom: 10}}>
-              3 Artificial Succulent Plants with Pots with White Planter Box –
-              Home Sweet Home & Live Laugh Love | Realistic Greenery Mini Faux
-              Plant Arrangements For Home Decor Office Table Bathroom Kitchen
-              Dorm
+              Jobe's Tree & Shrub Fertilizer Spikes, 15 Spikes
             </Text>
             <View style={{alignItems: 'center'}}>
               <NumericInput
-                onChange={(value) => console.log(value)}
+                onChange={value => console.log(value)}
                 onLimitReached={(isMax, msg) => console.log(isMax, msg)}
                 totalWidth={150}
                 totalHeight={40}
@@ -341,14 +330,14 @@ class Explore extends Component {
           <Divider style={{backgroundColor: 'black'}} />
           <Card
             style={{backgroundColor: 'red', height: '45%'}}
-            image={require('../assets/images/Bplant10.png')}>
+            image={require('../assets/images/Bfertilizers09.png')}>
             <Text style={{marginBottom: 10}}>
-              HC STAR Potted Artificial Pant Fake Green Grass with Pot
-              Decorative Lifelike Set of 6 (High-Foot, Green-4 and Purple-2)
+              Joyful Dirt Premium Concentrated All Purpose Organic Plant Food
+              and Fertilizer. Easy Use Shaker (2 oz)
             </Text>
             <View style={{alignItems: 'center'}}>
               <NumericInput
-                onChange={(value) => console.log(value)}
+                onChange={value => console.log(value)}
                 onLimitReached={(isMax, msg) => console.log(isMax, msg)}
                 totalWidth={150}
                 totalHeight={40}
@@ -395,59 +384,4 @@ class Explore extends Component {
   }
 }
 
-export default Explore;
-
-// const styles = StyleSheet.create({
-//   header: {
-//     paddingHorizontal: theme.sizes.base * 2,
-//     paddingBottom: theme.sizes.base * 2,
-//   },
-//   search: {
-//     height: theme.sizes.base * 2,
-//     width: width - theme.sizes.base * 2,
-//   },
-//   searchInput: {
-//     fontSize: theme.sizes.caption,
-//     height: theme.sizes.base * 2,
-//     backgroundColor: 'rgba(142, 142, 147, 0.06)',
-//     borderColor: 'rgba(142, 142, 147, 0.06)',
-//     paddingLeft: theme.sizes.base / 1.333,
-//     paddingRight: theme.sizes.base * 1.5,
-//   },
-//   searchRight: {
-//     top: 0,
-//     marginVertical: 0,
-//     backgroundColor: 'transparent',
-//   },
-//   searchIcon: {
-//     position: 'absolute',
-//     right: theme.sizes.base / 1.333,
-//     top: theme.sizes.base / 1.6,
-//   },
-//   explore: {
-//     marginHorizontal: theme.sizes.padding * 1.25,
-//   },
-//   image: {
-//     minHeight: 100,
-//     maxHeight: 130,
-//     maxWidth: width - theme.sizes.padding * 2.5,
-//     marginBottom: theme.sizes.base,
-//     borderRadius: 4,
-//   },
-//   mainImage: {
-//     minWidth: width - theme.sizes.padding * 2.5,
-//     minHeight: width - theme.sizes.padding * 2.5,
-//   },
-//   footer: {
-//     position: 'absolute',
-//     bottom: 0,
-//     right: 0,
-//     left: 0,
-//     overflow: 'visible',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//     height: height * 0.1,
-//     width,
-//     paddingBottom: theme.sizes.base * 4,
-//   },
-// });
+export default Fertilizers;

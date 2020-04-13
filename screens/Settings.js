@@ -93,9 +93,20 @@ class Settings extends Component {
             <Block row space="between" margin={[10, 0]} style={styles.inputRow}>
               <Block>
                 <Text gray2 style={{marginBottom: 10}}>
+                  Pincode
+                </Text>
+                <Text>700 042</Text>
+              </Block>
+              <Text medium secondary onPress={() => this.toggleEdit('pincode')}>
+                {editing === 'pincode' ? 'Save' : 'Edit'}
+              </Text>
+            </Block>
+            <Block row space="between" margin={[10, 0]} style={styles.inputRow}>
+              <Block>
+                <Text gray2 style={{marginBottom: 10}}>
                   E-mail
                 </Text>
-                <Text bold>user@mPlantation.com</Text>
+                <Text>user@mPlantation.com</Text>
               </Block>
             </Block>
           </Block>

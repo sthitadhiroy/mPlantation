@@ -5,6 +5,7 @@ import {
   KeyboardAvoidingView,
   StyleSheet,
   ScrollView,
+  View,
 } from 'react-native';
 
 import {Button, Block, Input, Text} from '../components';
@@ -47,7 +48,7 @@ export default class Login extends Component {
   render() {
     const {navigation} = this.props;
     const {loading, errors} = this.state;
-    const hasErrors = (key) => (errors.includes(key) ? styles.hasErrors : null);
+    const hasErrors = key => (errors.includes(key) ? styles.hasErrors : null);
 
     return (
       <ScrollView style={{marginVertical: theme.sizes.padding}}>
@@ -56,13 +57,14 @@ export default class Login extends Component {
             <Text h1 bold>
               Login
             </Text>
+            <View style={{padding: 20}} />
             <Block middle>
               <Input
                 label="Email"
                 error={hasErrors('email')}
                 style={[styles.input, hasErrors('email')]}
                 defaultValue={this.state.email}
-                onChangeText={(text) => this.setState({email: text})}
+                onChangeText={text => this.setState({email: text})}
               />
               <Input
                 secure
@@ -70,8 +72,9 @@ export default class Login extends Component {
                 error={hasErrors('password')}
                 style={[styles.input, hasErrors('password')]}
                 defaultValue={this.state.password}
-                onChangeText={(text) => this.setState({password: text})}
+                onChangeText={text => this.setState({password: text})}
               />
+              <View style={{padding: 20}} />
               <Button
                 style={{backgroundColor: '#9ACD32'}}
                 shadow
